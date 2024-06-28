@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "natural": "^7.0.6"
+    "natural": "^7.0.6",
+    "react-scripts": "^5.0.1"
   }
 }
