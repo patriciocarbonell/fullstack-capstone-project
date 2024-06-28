@@ -13,18 +13,11 @@ async function connectToDatabase() {
         return dbInstance
     };
 
-    const client = new MongoClient(url);      
+    const client = new MongoClient(url);
 
-    try {
-        await client.connect();
-
-        dbInstance = client.db(dbName);
-        
-        return dbInstance;
-    } catch (err) {
-        console.error("Error connecting to database:", err);
-        throw err;
-    }
+    await client.connect();
+    dbInstance = client.db(dbName);
+    return dbInstance;
 }
 
 module.exports = connectToDatabase;
